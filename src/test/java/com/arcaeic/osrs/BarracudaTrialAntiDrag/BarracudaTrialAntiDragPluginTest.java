@@ -3,7 +3,7 @@ package com.arcaeic.osrs.BarracudaTrialAntiDrag;
 import net.runelite.client.RuneLite;
 import net.runelite.client.externalplugins.ExternalPluginManager;
 
-public class BarracudaAntiDragPluginTest
+public class BarracudaTrialAntiDragPluginTest
 {
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args) throws Exception

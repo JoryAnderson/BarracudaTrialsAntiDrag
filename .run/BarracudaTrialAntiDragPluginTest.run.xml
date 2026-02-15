@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="BarracudaAntiDragPluginTest" type="Application" factoryName="Application" nameIsGenerated="true">
-    <option name="MAIN_CLASS_NAME" value="com.arcaeic.osrs.BarracudaTrialAntiDrag.BarracudaAntiDragPluginTest" />
+    <option name="MAIN_CLASS_NAME" value="com.arcaeic.osrs.BarracudaTrialAntiDrag.BarracudaTrialAntiDragPluginTest" />
     <module name="BarracudaTrialAntiDrag.test" />
     <option name="PROGRAM_PARAMETERS" value="--developer-mode" />
     <option name="VM_PARAMETERS" value="-ea" />
