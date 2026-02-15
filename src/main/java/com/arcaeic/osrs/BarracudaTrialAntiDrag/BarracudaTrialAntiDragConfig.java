@@ -52,6 +52,6 @@ public interface BarracudaTrialAntiDragConfig extends Config
 	)
 	default boolean isClickableCrystalExtractor()
 	{
-		return true;
+		return false;
 	}
 }
