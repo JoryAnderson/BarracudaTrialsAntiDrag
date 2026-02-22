@@ -1,4 +1,4 @@
-package com.arcaeic.osrs.BarracudaTrialHelmLock.features;
+ package com.arcaeic.osrs.BarracudaTrialHelmLock.features;
 
 import com.arcaeic.osrs.BarracudaTrialHelmLock.model.*;
 import com.arcaeic.osrs.BarracudaTrialHelmLock.module.PluginLifecycleComponent;
@@ -41,21 +41,19 @@ public class BarracudaTrialHelmLock
 	{
 		return Stream.of(
 			Arrays.stream(BarracudaTrial.values())
-				.map(BarracudaTrial::getGameObjectIds),
+				.map(BarracudaTrial::getGameObjectIds)
+				.flatMapToInt(Arrays::stream),
 			Arrays.stream(SailFacility.values())
-				.map(SailFacility::getGameObjectIds),
-			Arrays.stream(WindCatcherFacility.values())
-				.filter(s -> config.isClickableWindCatcher())
-				.map(WindCatcherFacility::getGameObjectIds),
-			Arrays.stream(GaleCatcherFacility.values())
-				.filter(s -> config.isClickableGaleCatcher())
-				.map(GaleCatcherFacility::getGameObjectIds),
-			Arrays.stream(CrystalExtractorFacility.values())
+				.map(SailFacility::getGameObjectIds)
+				.flatMapToInt(Arrays::stream),
+			Arrays.stream(WindFacilityEnum.WIND_CATCHER.getGameObjectIds())
+				.filter(s -> config.isClickableWindCatcher()),
+			Arrays.stream(WindFacilityEnum.GALE_CATCHER.getGameObjectIds())
+				.filter(s -> config.isClickableGaleCatcher()),
+			Arrays.stream(WindFacilityEnum.CRYSTAL_EXTRACTOR.getGameObjectIds())
 				.filter(s -> config.isClickableCrystalExtractor())
-				.map(CrystalExtractorFacility::getGameObjectIds)
 		)
-		.flatMap(s -> s)
-		.flatMapToInt(Arrays::stream)
+		.flatMapToInt(s -> s)
 		.boxed()
 		.collect(Collectors.toUnmodifiableSet());
 	}

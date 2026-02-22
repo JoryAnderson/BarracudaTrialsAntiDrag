@@ -2,10 +2,8 @@ package com.arcaeic.osrs.BarracudaTrialHelmLock.model;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.gameval.ObjectID;
 
-@Slf4j
 @RequiredArgsConstructor
 @Getter
 public enum SailFacility

@@ -2,11 +2,9 @@ package com.arcaeic.osrs.BarracudaTrialHelmLock.util;
 
 import javax.inject.Inject;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.Client;
 import net.runelite.api.gameval.VarbitID;
 
-@Slf4j
 @RequiredArgsConstructor(onConstructor_ = @Inject)
 public class BarracudaTrialUtil
 {
